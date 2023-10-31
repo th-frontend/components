@@ -4,13 +4,11 @@
   "description": "A simple static website project",
   "scripts": {
     "start": "http-server",
-    "build": "your-build-script-here",
-    "test": "your-test-script-here"
   },
   "devDependencies": {
     "http-server": "^0.12.3"
   },
   "dependencies": {
-    "your-dependencies-here": "^x.x.x"
+
   }
 }
