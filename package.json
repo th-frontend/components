@@ -3,12 +3,9 @@
   "version": "1.0.0",
   "description": "A simple static website project",
   "scripts": {
-    "start": "http-server",
+    "start": "http-server -p 3000"
   },
   "devDependencies": {
     "http-server": "^0.12.3"
-  },
-  "dependencies": {
-
   }
 }
