@@ -10,7 +10,7 @@ We are going to have 3 levels of Components
 Click this to see each component load with html/css/js 
 
 
-<a href="https://stackblitz.com/github/th-frontend/homepage-components">
+<a href="https://stackblitz.com/github/th-frontend/components">
   <img
     alt="Open in StackBlitz"
     src="https://developer.stackblitz.com/img/open_in_stackblitz.svg"
