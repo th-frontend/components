@@ -1,4 +1,4 @@
-# Page Components 
+# Components 
 
 We are going to have 3 levels of Components 
 
