@@ -7,6 +7,9 @@ We are going to have 3 levels of Components
 - Widgets/ Modules
 
 
+Rules: Everything that is added here needs to be reviewed by 2 people at least. 
+
+
 Click this to see each component load with html/css/js 
 
 
