@@ -9,6 +9,8 @@ We are going to have 3 levels of Components
 
 Rules: Everything that is added here needs to be reviewed by 2 people at least. 
 
+## Rules of the road 
+Speedy / Accessible / Visual and Performant 
 
 Click this to see each component load with html/css/js 
 
