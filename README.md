@@ -7,7 +7,9 @@ We are going to have 3 levels of Components
 - Widgets/ Modules
 
 
-Rules: Everything that is added here needs to be reviewed by 2 people at least. 
+### Rules: 
+
+Everything that is added here needs to be reviewed by 2 people at least. 
 
 ## Rules of the road 
 Speedy / Accessible / Visual and Performant 
