@@ -151,7 +151,7 @@ template.innerHTML = /*html*/`
       Control how much of each overlapping image is shown. 
       0 means the first image is completely hidden and the second image is fully visible.
       100 means the first image is fully visible and the second image is completely hidden.
-      50 means both images are half-shown, half-hidden.
+      50 means both images are half-shown half-hidden.
     </span>
     <input type="range" value="50" min="0" max="100"/>
     <div class="titles">
