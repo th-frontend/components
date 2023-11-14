@@ -5,7 +5,7 @@ We are going to have 3 levels of Components
 - Homepage
 - Content Page
 - Widgets/ Modules
-
+- Forms 
 
 ### Rules: 
 
