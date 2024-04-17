@@ -8,7 +8,7 @@ This repository houses page-level elements for thefrontend project. These elemen
 
 ## Structure
 
-The repository is organized into three main levels of components:
+The repository is organized into main levels of components:
 
 - Homepage: Elements specifically designed for the homepage layout and functionality.
 - Content Page: Reusable components for building various content pages within the project.
