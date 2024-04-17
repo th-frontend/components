@@ -1,0 +1,124 @@
+<style>
+    section {
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+        font-family: inherit;
+        transition: 0.5s ;
+    }
+    
+    .center {
+        text-align: center;
+        width: 80%;
+        border-radius: 5px;
+        z-index: 5;
+        padding: 1rem;
+    }
+    
+    button {
+        padding: 1rem 4rem;
+        background-color: #000;
+        color: #fff;
+        font-size: large;
+        text-transform: capitalize;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .modal-parent {
+        position: fixed;
+        inset: 0;
+        height: 100vh;
+        width: 100%;
+        display: none;
+    }
+    
+    .modal {
+        background: white;
+        width: 70%;
+        padding: 30px;
+        border-radius: 6px;
+        position: absolute;
+        inset: 50%;
+        transform: translate(-50%, -50%);
+        font-size: large;
+        line-height: 2rem;
+        letter-spacing: 0.5px;
+        word-spacing: 5px;
+        animation: 1s drop;
+        position: relative;
+    }
+    
+    @keyframes drop {
+        0% {
+            top: -100px;
+        }
+    
+        100% {
+            top: 50%;
+        }
+    }
+    
+    .x {
+        color:#000;
+        position: absolute;
+        inset: 10px 20px auto auto;
+        font-size: 40px;
+        cursor: pointer;
+    }
+    
+    @media only screen and (max-width: 600px) {
+        .modal,
+        .center {
+            width: 80%;
+            padding: 1rem;
+            line-height: 1.4rem;
+            word-spacing: 3px;
+            font-size: small;
+        }
+        button {
+            padding: 1rem;
+            font-size: medium;
+        }
+    }
+    </style>
+<div class="center">
+    <button class="button pop-btn" >Claim Now</button>
+</div>
+</section>
+<div class="modal-parent">
+<div class="modal">
+    <p>Here's your coupon code for a free small job (up to 2 hours)</p>
+  <p><strong>Code: TRYSURV24</strong></p>
+    <span class="x" draggable="true">&times;</span>
+</div>
+</div>
+
+<script>
+    var parent = document.querySelector(".modal-parent"),
+      btn = document.querySelector(".pop-btn"),
+      X = document.querySelector(".x"),
+      section = document.querySelector("section");
+    
+    btn.addEventListener("click", appear);
+    
+    function appear() {
+      parent.style.display = "block";
+      section.style.filter = "blur(10px)";
+    }
+    X.addEventListener("click", disappearX);
+    function disappearX() {
+      parent.style.display = "none";
+      section.style.filter = "blur(0px)";
+    }
+    parent.addEventListener("click", disappearParent);
+    function disappearParent(e) {
+      if (e.target.className == "modal-parent") {
+        parent.style.display = "none";
+        section.style.filter = "blur(0px)";
+      }
+    }
+    </script>
