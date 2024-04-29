@@ -1,0 +1,221 @@
+<style>
+    /** Services **/
+#services {
+    padding-block: clamp(3rem, 10vw, 6rem);
+    position: relative;
+    background-color: var(--brand-light);
+}
+
+#services > div {
+    position: relative;
+    margin-inline: auto;
+    display: grid;
+    max-width: 90rem;
+    align-items: center;
+    gap: 2.5rem;
+    padding-inline: clamp(1rem, 3vw, 2rem);
+}
+
+#services-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#services-text .cta-button {
+    display: none;
+}
+#services-grid {
+    display: grid;
+    gap: 1rem;
+    width: min(100%, 500px);
+    margin: 0 auto;
+}
+.service-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.service-item img {
+    object-fit: cover;
+    height: 12rem;
+}
+.service-item--content {
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.service-item--text {
+    position: relative;
+    padding: 1.5rem;
+    line-height: 1.25;
+    color: #fff;
+    background-color: var(--brand-default);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.service-item--text h3 {
+    transition: .3s ease;
+    font-size: 1.35rem;
+    line-height: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+.service-item--text > div {
+    margin-top: .75rem;
+}
+.home .service-item--text p {
+    font-size: 1rem;
+    line-height: 1.25;
+    margin-bottom: 1rem;
+}
+.service-item--text a {
+    display: inline-block;
+    border-radius: 9999px;
+    border-width: 2px;
+    border-color: #fff;
+    padding: .25rem .5rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition:.2s ease;
+}
+.service-item--text a:hover {
+    background-color: #fff;
+    color: var(--brand-dark);
+}
+@media (min-width: 768px){
+    #services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .service-item {
+        height: 14rem;
+    }
+    #services-grid {
+        gap: 2rem;
+        width: 100%;
+    }
+    .service-item img {
+        position: absolute;
+        inset: 0;
+        height: 100%;
+        width: 100%;
+    }
+    .service-item--content {
+        align-items: end;
+        justify-content: end;
+        text-align: right;
+    }
+    .service-item--text {
+        transition: .2s ease;
+        width: 14rem;
+        clip-path: polygon(50% 0, 100% 0, 100% 100%, 0 100%);
+        height: 100%;
+        justify-content: end;
+    }
+    .service-item:hover .service-item--text {
+        clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+        polygon(20% 0,100% 0,100% 100%,20% 100%);
+    }
+    .service-item--text h3 {
+        position: absolute;
+        bottom: 2rem;
+        right: 1.5rem;
+        max-width: 13ch;
+    }
+    .service-item:hover .service-item--text h3 {
+        bottom: 9rem;
+    }
+    .service-item--text > div {
+        opacity:0;
+        transition: .3s ease;
+    }
+    .service-item:hover .service-item--text > div {
+        opacity: 1;
+    }
+}
+@media (min-width: 1024px){
+    #services > div {
+        grid-template-columns: 30% 1fr;
+    }
+    #services-text  {
+        text-align:left;
+        align-items: flex-start;
+    }
+    #services-text .cta-button {
+        display: block;
+    }
+}
+</style>
+    <div id="services" class="home">
+        <div>
+          <div id="services-text">
+            <h2>Our Solutions</h2>
+            <p class="">We provide complete solutions for basements, foundations, crawl spaces and more.</p>
+            <a href="/free-inspection.html" class="button mx-0">Get Your Free Inspection</a>
+          </div>
+          <div id="services-grid">
+          <!--Foundation Repair-->
+            <div class="service-item">
+              <img src="https://cdn.treehouseinternetgroup.com/cms_images/637/srv-foundation.jpg" alt="Foundation repair in [major cities 1] by [company]">
+              <div class="service-item--content">
+                <div class="service-item--text">
+                  <h3>Foundation Repair</h3>
+                  <div>
+                    <p>We'll find the right solution for your foundation problems.</p>
+                    <a href="/foundation-repair.html" title="Foundation repair services in [territory]">foundation services</a>
+                  </div>
+                </div>
+              </div>
+            </div>      
+            <!--Drainage Solutions-->
+            <div class="service-item">
+              <img src="https://cdn.treehouseinternetgroup.com/cms_images/637/srv-drainage.jpg" alt="Drainage solutions in [major cities 1] by [company]">
+              <div class="service-item--content">
+                <div class="service-item--text">
+                  <h3>Drainage Solutions</h3>
+                  <div>
+                    <p>Prevent foundation damage with effective yard drainage.</p>
+                    <a href="/drainage-solutions.html" title="Drainage solutions in [territory]">drainage services</a>
+                  </div>
+                </div>
+              </div>
+            </div>          
+            <!--Crawl Space Repair-->
+            <div class="service-item">
+              <img src="https://cdn.treehouseinternetgroup.com/cms_images/637/srv-crawl.jpg" alt="Crawlspace Repair in [major cities 1] by [company]">
+              <div class="service-item--content">
+                <div class="service-item--text">
+                  <h3>Crawlspace Repair</h3>
+                  <div>
+                    <p>We offer complete crawl space encapsulation & repair services.</p>
+                    <a href="/crawl-space-repair.html" title="Crawl space repair services in [territory]">crawlspace services</a>
+                  </div>
+                </div>
+              </div>
+            </div>     
+            <!--Concrete Services-->
+            <div class="service-item">
+              <img src="https://cdn.treehouseinternetgroup.com/cms_images/637/srv-concrete.jpg" alt="Concrete repair services in [major cities 1] by [company]">
+              <div class="service-item--content">
+                <div class="service-item--text">
+                  <h3>Concrete Repair</h3>
+                  <div>
+                    <p>Quickly & effectively stabilize your sinking, settling concrete.</p>
+                    <a href="/concrete-services.html" title="Concrete services in [territory]">concrete services</a>
+                  </div>
+                </div>
+              </div>
+            </div>    
+          </div>
+        </div>
+      </div>
