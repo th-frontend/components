@@ -1,0 +1,180 @@
+<style>
+    /** Territory Map & City Scroll **/
+#territory {
+    position: relative;
+    background-color: var(--brand-default);
+}
+
+#territory::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    pointer-events: none;
+    box-shadow: 0 0 40px rgba(0 0 0 / 20%) inset;
+    z-index: 10;
+    display: block;
+    inset: 0;
+}
+
+#territory__bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    clip-path: polygon(0% 0, 100% 0, 100% 75%, 0 45%);
+    right: 0;
+    background-color: var(--brand-light, #333);
+}
+
+#territory__content {
+    position: relative;
+    margin-inline:auto;display: grid;
+    max-width: 48rem;
+    justify-content: space-between;
+    padding-inline:clamp(1rem, 3vw, 2rem);padding-block:clamp(3rem, 10vw, 6rem);gap: 4rem;
+}
+
+#territory__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--brand-dark);
+}
+
+#territory :is(h2,h3) {
+    text-align: center;
+}
+
+#territory h2 {
+    color: var(--brand-dark);
+    text-align: center;
+    font-size: clamp(26px, 3.5vw, 36px);
+    line-height: 1.25;
+    font-family: inherit;
+    font-weight: 800;
+}
+
+#territory h2::after {
+    content: '';
+    width: 8rem;
+    height: 3px;
+    background-color: var(--brand-default);
+    display: block;
+    margin: 1rem auto 0;
+}
+
+#territory__text h3 {
+    font-size: clamp(1.15rem, 2vw, 1.35rem);
+    margin-bottom: .5rem;
+}
+
+#territory__map {
+    aspect-ratio: 1 / 1;
+    border-radius: 999px;
+    background-color: #fff;
+    box-shadow: 0 0 3rem rgba(0 0 0 / 10%);
+    padding: clamp(2rem, 10vw, 4rem);
+    overflow: hidden;
+    width: min(100%, 600px);
+    margin: auto;
+}
+
+#territory__map img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+    #territory__content {
+        max-width:90rem;
+        grid-template-columns: 45% 50%;
+        text-align: left;
+    }
+
+    #territory__bg {
+        width: 80%;
+        clip-path: polygon(0% 0, 100% 0, 100% 100%, 350px 100%);
+    }
+
+    #territory__text {
+        order: 1;
+    }
+
+    #territory :is(h2,h3) {
+        text-align: left;
+    }
+}
+
+/** City Scroll Token **/
+.city_scroll_list_content {
+    height: 12rem;
+    overflow: scroll;
+    padding-bottom: 4rem;
+    -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent);
+    mask-image: linear-gradient(to bottom, black 50%, transparent);
+}
+
+ul.city_scroll_list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 0.5rem;
+    row-gap: 0.25rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    list-style: none;
+    padding-right: 2rem;
+}
+
+ul.city_scroll_list a {
+    text-decoration: underline;
+}
+
+p.more-assets {
+    display: block;
+    margin-top: 2rem;
+    border: 2px solid currentColor;
+    width: fit-content;
+    font-size: 1rem;
+    text-transform: capitalize;
+    color: initial;
+    text-decoration: none;
+    margin-inline:auto;}
+
+p.more-assets a {
+    display: block;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+}
+
+p.more-assets:hover {
+    background-color: currentColor;
+}
+
+p.more-assets:hover a {
+    filter: invert(1);
+}
+
+@media screen and (min-width: 1024px) {
+    p.more-assets {
+        margin-inline:0;
+    }
+}
+</style>
+
+    <!-- Territory map & cities -->
+    <div id="territory" class="home">
+        <div id="territory__bg"></div>
+        <div id="territory__content">
+            <div id="territory__text">
+                <div>
+                  <h2>Proudly Serving [territory]</h2>
+                  [[city_scroll:75]]
+                </div>
+            </div>
+            <div id="territory__map">
+                <img src="https://picsum.photos/800/800"" alt="[company] serves [territory], including [major cities1]">
+            </div>
+        </div>
+    </div>
+    <!-- End territory -->
