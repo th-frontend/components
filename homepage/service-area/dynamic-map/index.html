@@ -1,0 +1,85 @@
+<style>
+/** Territory Map & City Scroll **/
+#territory {
+    position: relative;
+    overflow: auto;
+    background-color: var(--brand-default);
+}
+#territory__map {
+    height: 22rem;
+    inset-block: 0;
+    right: 0;
+}
+#territory__text {
+    position: relative;
+    padding-inline: 1rem;
+    padding-block: 2.5rem;
+    color: #fff;
+}
+#territory__text h2 {
+    margin-bottom: 1rem;
+    font-size: clamp(1.875rem, 3vw, 2.25rem);
+    line-height: clamp(2.25rem,3vw, 2.5rem);
+    font-weight: 800;
+}
+@media (min-width: 1024px){
+    #territory__map {
+        -webkit-clip-path: polygon(350px 0, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(350px 0, 100% 0, 100% 100%, 0 100%);
+        width: 60%;
+        height: 100%;
+        position: absolute;
+    }
+    #territory__text {
+        padding-block: 5rem;
+        width: 45%;
+    }
+}
+
+/** City Scroll Token **/
+.city_scroll_list_content {
+    -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent);
+}
+.city_scroll_list_content {
+    height: 12rem;
+    overflow: scroll;
+    padding-bottom: 4rem;
+}
+ul.city_scroll_list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 0.5rem;
+    row-gap: 0.25rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+ul.city_scroll_list a {
+    text-decoration: underline;
+    COLOR: LIGHTBLUE;
+}
+.city_scroll_list_footer p.more-assets {
+    margin-top: 2rem;
+    display: inline-block;
+    border-radius: 9999px;
+    border-width: 2px;
+    
+    color: #fff;
+}
+.city_scroll_list_footer p.more-assets a {
+    color: currentColor;
+    padding: .5rem 1rem;
+}
+
+</style>
+
+    <!-- Territory map & cities -->
+    <div id="territory">
+        <div id="territory__map">
+          [[service_area_google_map]]
+        </div>
+        <div id="territory__text">
+            <h2 class="mb-4 text-3xl lg:text-4xl font-extrabold">Proudly Serving [territory]</h2>
+            [[city_scroll:50]]
+        </div>
+      </div>
+    <!-- End territory -->
