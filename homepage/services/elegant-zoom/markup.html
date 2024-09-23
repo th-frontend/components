@@ -1,3 +1,143 @@
+<style>/***------ Homepage Services ------***/
+#services {
+    padding: 60px 0;
+}
+/* Service Pack Hover Effect */
+.service-item {
+    position: relative;
+    overflow: hidden;
+    height: 225px;
+    background: #353535;
+    text-align: center;
+    margin-top: 0.9375rem;
+    margin-bottom: 0.9375rem;
+}
+.service-item img {
+    position: absolute;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    opacity: 0.75;
+    transition: all 0.3s ease;
+    transform: scale(1.12, 1.12) translateY(-50%);
+    top: 60%;
+}
+.service-item a:hover img {
+    opacity: 0.3;
+    transform: scale(1, 1) translateY(-50%);
+    top: 50%;
+}
+.service-item a {
+    padding: 0;
+    display: block;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.service-item a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.service-item a::before {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    bottom: 20px;
+    left: 20px;
+    border: 1px solid #fff;
+    content: "";
+    opacity: 0;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+.service-item .thumb-text {
+    width: 85%;
+    transform: translate(-50%, -50%);
+    top: 65%;
+    left: 50%;
+    position: absolute;
+    transition: all 0.3s ease;
+}
+.service-item a:hover .thumb-text {
+    opacity: 1;
+    top: 50%;
+}
+.service-item p.service-title {
+    font-family: "Barlow", sans-serif;
+    word-spacing: 0;
+    font-size: 21px;
+    font-weight: 600;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+.service-item p.service-text {
+    letter-spacing: 1px;
+    font-size: 60%;
+    width: 80%;
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    opacity: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    transition: all 0.3s ease;
+}
+.service-item a:hover::before,
+.service-item a:hover p.service-text {
+    opacity: 1;
+    line-height: inherit;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+@media screen and (max-width: 960px) {
+    #services .row div.columns:nth-child(odd) {
+        clear: left;
+    }
+}
+@media screen and (min-width: 641px) and (max-width: 761px) {
+    .service-item p.service-title {
+        font-size: ;
+    }
+    .service-item p.service-text {
+        max-width: 230px;
+    }
+}
+@media screen and (max-width: 640px) {
+    .service-item p.service-text {
+        max-width: 280px;
+    }
+    .service-item p.service-title {
+        padding: 18% 0 20px 0;
+    }
+    .service-item a:hover .service-title {
+        padding: 15% 0 10px 0;
+    }
+}
+@media screen and (max-width: 400px) {
+    .service-item {
+        max-height: 180px;
+    }
+    .service-item p.service-text {
+        max-width: 280px;
+    }
+    .service-item p.service-title {
+        padding: 23% 0 20px 0;
+    }
+    .service-item a:hover p.service-title {
+        padding: 22% 0 20px 0;
+    }
+    .service-item p:not(.service-title) {
+        display: none;
+    }
+}
+/* END Service Pack Hover Effect */</style>
 <div class="container home" id="services">
     <div class="row">
 
