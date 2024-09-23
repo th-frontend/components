@@ -1,3 +1,192 @@
+<style>
+  /***------ Homepage Services ------***/
+#services {
+  background: #fff;
+}
+#services .row {
+  padding: 60px 0px;
+}
+.service-item {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 30px 20px;
+  border: #fff solid 2px;
+  border-radius: 2px;
+  box-sizing: border-box;
+  background-color: transparent;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  color: #fff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  z-index: 2;
+}
+.service-item:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+.service-item:after {
+  content: "";
+  display: block;
+  border-top: 0 #6ea1ff solid;
+  border-bottom: 30px transparent solid;
+  border-left: 30px #6ea1ff solid;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+.service-item:hover:after {
+  border-left: 530px solid #0c2046;
+  border-bottom: 530px solid transparent;
+  background-color: #6ea1ff;
+  overflow: hidden;
+  z-index: -1;
+}
+.service-item:hover {
+  margin-bottom: 10px;
+  color: #fff;
+  overflow: hidden;
+  cursor: pointer;
+}
+.service-item:hover,
+.service-item:after,
+.service-item {
+  -webkit-transition: 0.5s color ease;
+  transition: 0.5s color ease;
+}
+.service-item:hover,
+.service-item:after {
+  -webkit-transition: 0.5s border ease;
+  transition: 0.5s border ease;
+}
+.service-item:after {
+  overflow: hidden;
+}
+.highlightedService.service-item:after {
+  border-top: 0 #4ac75d solid;
+  border-bottom: 30px transparent solid;
+  border-left: 30px #4ac75d solid;
+}
+.highlightedService.service-item:hover:after {
+  border-left: 530px solid #0d460c;
+  border-bottom: 530px solid transparent;
+  background-color: #4ac75d;
+  overflow: hidden;
+  z-index: -1;
+}
+.service-item:before,
+.service-item:hover:before,
+.service-item:hover:after {
+  -webkit-transition: 0.75s all ease;
+  transition: 0.75s all ease;
+}
+.overlaySwipeOne.service-item {
+  background: url(https://a80427d48f9b9f165d8d-c913073b3759fb31d6b728a919676eab.ssl.cf1.rackcdn.com/v3/templates/services/basement-wg.jpg)
+    no-repeat center center;
+  background-size: cover;
+}
+.overlaySwipeTwo.service-item {
+  background: url(https://a80427d48f9b9f165d8d-c913073b3759fb31d6b728a919676eab.ssl.cf1.rackcdn.com/v3/templates/services/basement-wg.jpg)
+    no-repeat center center;
+  background-size: cover;
+}
+.overlaySwipeThree.service-item {
+  background: url(https://a80427d48f9b9f165d8d-c913073b3759fb31d6b728a919676eab.ssl.cf1.rackcdn.com/v3/templates/services/basement-wg.jpg)
+    no-repeat center center;
+  background-size: cover;
+}
+.overlaySwipeFour.service-item {
+  background: url(https://a80427d48f9b9f165d8d-c913073b3759fb31d6b728a919676eab.ssl.cf1.rackcdn.com/v3/templates/services/basement-wg.jpg)
+    no-repeat center center;
+  background-size: cover;
+}
+.service-item p {
+  margin-bottom: 0;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+.service-item p.service-title {
+  margin-bottom: 5px;
+  font-family: inherit;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 1024px) {
+  .service-item p.service-title {
+    font-size: 1.1rem;
+  }
+  .service-item p {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .service-item p.service-title {
+    font-size: 1rem;
+  }
+  .service-item p {
+    font-size: 0.875rem;
+  }
+  .service-item:hover:after {
+    border-left: 420px solid #0c2046;
+    border-bottom: 420px solid transparent;
+  }
+  .highlightedService.service-item:hover:after {
+    border-left: 420px solid #0d460c;
+    border-bottom: 420px solid transparent;
+  }
+}
+@media screen and (max-width: 740px) {
+  .service-item {
+    min-height: 185px;
+  }
+}
+@media screen and (max-width: 640px) {
+  #services {
+    padding: 30px 0px;
+  }
+  .service-item p:not(.service-title) {
+    display: none;
+  }
+  .service-item p.service-title {
+    margin-bottom: 0px;
+    font-size: 16px;
+  }
+  .service-item {
+    min-height: auto;
+  }
+  .service-item:hover:after {
+    border-left: 610px solid #0c2046;
+    border-bottom: 610px solid transparent;
+  }
+  .highlightedService.service-item:hover:after {
+    border-left: 610px solid #0d460c;
+    border-bottom: 610px solid transparent;
+  }
+}
+@media screen and (max-width: 480px) {
+  .service-item:hover:after {
+    border-left: 450px solid #0c2046;
+    border-bottom: 450px solid transparent;
+  }
+  .highlightedService.service-item:hover:after {
+    border-left: 450px solid #0d460c;
+    border-bottom: 450px solid transparent;
+  }
+}
+</style>
 <div class="container" id="services">
   <div class="row">
     <div class="columns medium-6">
